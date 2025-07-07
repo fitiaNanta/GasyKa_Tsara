@@ -1,0 +1,26 @@
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static "css/paozy.css" %}">
+<title>{% block lohateny %}{% endblock lohateny %}</title>
+<header>
+    <div class="logo" aria-label="Graphiste Blog logo">
+      GasyKa <span class="highlight">Tsara</span>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">Photographie</a></li>
+        <li><a href="#">Print</a></li>
+        <li><a href="#">Vidéo</a></li>
+        <li><a href="#">Webdesign</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="newsletter-btn" aria-label="S'abonner à la newsletter">
+        Newsletter
+      </button>
+    </div>
+  </header>
+{% block vatany %}
+{% endblock vatany %}

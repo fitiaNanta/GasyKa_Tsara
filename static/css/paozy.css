@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #f3f3f3; */
+  color: #222;
+  line-height: 1.5;
+}
+
+#fandraisana{
+
+    a {
+      text-decoration: none;
+      color: #0bbc11;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #053e07;
+    }
+
+    /* Container for entire page */
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+
+    /* Header/Navbar */
+    header {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #eaeaea;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #222;
+      user-select: none;
+    }
+    .logo .highlight {
+      color: #0bbc11;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.7rem;
+      list-style: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li {
+      white-space: nowrap;
+    }
+    nav ul li a {
+      color: #222;
+    }
+    nav ul li a:hover {
+      color: #0bbc11;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .search-btn svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .newsletter-btn {
+      background: #0bbc11;
+      border: none;
+      border-radius: 30px;
+      padding: 0.5rem 1.3rem;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s ease;
+      white-space: nowrap;
+    }
+    .newsletter-btn:hover {
+      background: #09650c;
+    }
+    .newsletter-btn svg {
+      width: 1rem;
+      height: 1rem;
+      fill: white;
+    }
+
+    /* Hero Banner */
+    .hero {
+      margin: 2rem auto;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      max-width: 95%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/11553525-3fb1-41b0-b143-ba6e284319d6.png');
+      /* The alt text: "Illustration of a person’s right hand sketching on a digital drawing tablet diagonally placed on a wooden table, with another blurred digital monitor screen to the right in a modern office environment, color muted" */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+    .hero-content h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .hero-content button {
+      background: rgba(255 255 255 / 0.3);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid rgba(255 255 255 / 0.5);
+      transition: background-color 0.3s ease;
+    }
+    .hero-content button:hover {
+      background: rgba(255 255 255 / 0.6);
+    }
+
+    /* Main content area */
+    main {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    /* Social share vertical fixed bar */
+    .social-share {
+      background: #fff;
+      padding: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 48px;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      place-self: start;
+    }
+    .social-share a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .social-link.linkedin {
+      background-color: #0a66c2;
+    }
+    .social-link.linkedin:hover {
+      background-color: #084a98;
+    }
+    .social-link.twitter {
+      background-color: #1d9bf0;
+    }
+    .social-link.twitter:hover {
+      background-color: #0d8ddb;
+    }
+    .social-link.facebook {
+      background-color: #39569c;
+    }
+    .social-link.facebook:hover {
+      background-color: #2e4678;
+    }
+    .social-link.pinterest {
+      background-color: #b72a2a;
+    }
+    .social-link.pinterest:hover {
+      background-color: #8e2121;
+    }
+    .social-link.reddit {
+      background-color: #0bbc11;
+    }
+    .social-link.reddit:hover {
+      background-color: #0bbc11;
+    }
+
+    /* Article Section */
+    article {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem 1.7rem 1.7rem 1.7rem;
+      max-width: 680px;
+      box-shadow: 0 2px 15px rgb(0 0 0 / 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: fit-content;
+    }
+    article nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #0bbc11;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+    article nav.breadcrumbs a {
+      color: #0bbc11;
+    }
+    article nav.breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    article h2 {
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+
+    article .meta {
+      font-size: 0.875rem;
+      color: #999;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    article .meta svg {
+      width: 1rem;
+      height: 1rem;
+      fill: #999;
+    }
+
+    /* Sidebar */
+    aside {
+      max-width: 320px;
+      background: #fff;
+      padding: 1.5rem 1.7rem 1.7rem 1.7rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgb(0 0 0 / 0.06);
+      font-size: 1rem;
+    }
+    aside h3 {
+      font-weight: 900;
+      margin-bottom: 0.8rem;
+      font-size: 1.25rem;
+      color: #111;
+    }
+    aside p {
+      color: #444;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    aside button {
+      border: none;
+      background: #0bbc11;
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    aside button:hover {
+      background: #09650c;
+    }
+    aside svg {
+      width: 140%;
+      opacity: 0.1;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Small bell icon bottom left */
+    .notification-bell {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #0bbc11;
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(120, 255, 58, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 200;
+      transition: background-color 0.3s ease;
+    }
+    .notification-bell:hover {
+      background: #09650c;
+    }
+    .notification-bell svg {
+      width: 22px;
+      height: 22px;
+      fill: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      article {
+        max-width: 100%;
+      }
+      aside {
+        max-width: 100%;
+        margin-top: 2rem;
+        position: relative;
+      }
+      .social-share {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 0;
+        border-radius: 0 0 12px 12px;
+        position: static;
+        margin-top: 16px;
+        box-shadow: none;
+      }
+      .social-share a {
+        width: 38px;
+        height: 38px;
+      }
+    }
+}
