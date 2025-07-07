@@ -5,3 +5,6 @@ from django.shortcuts import render
 def pejyfandraisana(request):
     return render(request, "pejy_fandraisana/fandraisana.html")
 
+def pejytantara(request):
+    return render(request, "pejy_fandraisana/tantara.html")
+

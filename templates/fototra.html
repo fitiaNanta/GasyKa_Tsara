@@ -4,12 +4,14 @@
 <link rel="stylesheet" href="{% static "css/paozy.css" %}">
 <title>{% block lohateny %}{% endblock lohateny %}</title>
 <header>
-    <div class="logo" aria-label="Graphiste Blog logo">
-      GasyKa <span class="highlight">Tsara</span>
-    </div>
+    <a class="logo" href="{% url "fandraisana" %}">
+        <div class="logo" aria-label="Graphiste Blog logo">
+          GasyKa <span class="highlight">Tsara</span>
+        </div>
+    </a>
     <nav aria-label="Primary navigation">
       <ul>
-        <li><a href="#">Branding</a></li>
+        <li><a href="{% url "tantara" %}">Tantara</a></li>
         <li><a href="#">Photographie</a></li>
         <li><a href="#">Print</a></li>
         <li><a href="#">Vidéo</a></li>
@@ -24,3 +26,5 @@
   </header>
 {% block vatany %}
 {% endblock vatany %}
+
+{% block tongony %}{% endblock tongony %}
