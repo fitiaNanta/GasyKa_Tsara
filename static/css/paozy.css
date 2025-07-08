@@ -427,3 +427,173 @@ nav ul li a:hover {
     margin-bottom: 6px;
   }
 }
+
+#vohambolana {
+  
+  .fototra {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: aliceblue;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .cards-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem 1.5rem;
+  }
+
+  /* Common Card styles */
+  .card {
+    background: #fff;
+    padding: 1.8rem 2rem 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+  }
+  .card:hover {
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* Card content: headings and paragraphs */
+  .card h3 {
+    margin: 0 0 0.6rem 0;
+    font-weight: 900;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: #111;
+  }
+  .card p {
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  /* Highlight card with background image and overlay */
+  .card.highlight {
+    color: #fff;
+    padding: 2rem 2rem 2.5rem 2rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 8px 36px rgb(0 0 0 / 0.3);
+    font-weight: 700;
+  }
+  .card.highlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(148, 199, 92, 0.85);
+    border-radius: 1rem;
+    z-index: 0;
+  }
+  .card.highlight > * {
+    position: relative;
+    z-index: 1;
+  }
+  .card.highlight h3 {
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  .card.highlight p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: #ffecd3dd;
+  }
+  .card.highlight .card-footer {
+    color: #ffddd3cc;
+    font-weight: 600;
+  }
+  .card.highlight .card-footer svg {
+    fill: #ffddd3cc;
+  }
+
+  /* Dark theme cards */
+  .card.dark {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 1.8rem 2rem 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card.dark:hover {
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.25);
+    transform: translateY(-4px);
+  }
+  .card.dark h3 {
+    color: #f1f1f1;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  .card.dark p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+    line-height: 1.35;
+  }
+  .card.dark .card-footer {
+    color: #bbb;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .card.dark .card-footer svg {
+    fill: #bbb;
+  }
+
+  /* Overlay image for dark cards */
+  .card.dark .card-image {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    margin: -2rem -2rem 1.5rem -2rem; /* to cover top padding */
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .card.dark .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55) saturate(1.3);
+    border-radius: 1rem 1rem 0 0;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+  }
+  .card.dark:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    .card.dark .card-image {
+      height: 140px;
+      margin: -1.8rem -2rem 1.5rem -2rem;
+    }
+  }
+}

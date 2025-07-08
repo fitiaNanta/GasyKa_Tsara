@@ -17,14 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
-from pejy_fandraisana.views import pejyfandraisana, pejytantara
+from pejy_fandraisana.views import pejyfandraisana, pejytantara, pejyvohambolana, pejyohabolana
 
 from src import settings
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', pejyfandraisana, name='fandraisana'),
     path('tantara', pejytantara, name='tantara'),
+    path('vohambolana', pejyvohambolana, name='vohambolana'),
+    path('ohabolana', pejyohabolana, name='ohabolana')
 ]
 
 if settings.DEBUG:

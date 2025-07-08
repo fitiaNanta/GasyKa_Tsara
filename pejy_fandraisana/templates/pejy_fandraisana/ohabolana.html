@@ -1,0 +1,88 @@
+{% extends "fototra.html" %}
+{% block lohateny %}
+    GasyKa Tsara | ohabolana
+{% endblock lohateny %}
+{% block vatany %}
+  <!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <title>Lisitr'ireo Ohabolana</title>
+    <style>
+        .fototra {
+            font-family: Arial;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .fototra h1{
+          margin: 0 10rem;
+        }
+        .sokajy {
+            margin-bottom: 20px;
+        }
+        .ohabolana {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-left: 5px solid #008080;
+        }
+    </style>
+</head>
+<body>
+  <div class="fototra">
+    <h1>Lisitr'ireo Ohabolana sy Sokajy</h1>
+    <div class="sokajy">
+          <h2>Sokajy rehetra</h2>
+          <ul>
+              {% for s in sokajy_lisitra %}
+                  <li>{{ s.aranana }}</li>
+              {% endfor %}
+          </ul>
+      </div>
+  
+      <div class="ohabolana">
+          <h2>Ohabolana rehetra</h2>
+          {% for o in ohabolana_lisitra %}
+              <div class="ohabolana">
+                  <p><strong>Ohabolana :</strong> {{ o.ohabolana }}</p>
+                  <p><strong>Mpanoratra :</strong> {{ o.mpanoratra|default:"Tsy fantatra" }}</p>
+                  <p><strong>Sokajy :</strong> {{ o.okajy.aranana }}</p>
+              </div>
+          {% endfor %}
+      </div>
+  </body>
+  </html>
+  </div>
+  
+{% endblock vatany %}
+{% block tongony %}
+    <style>
+    footer {
+    background-color: #388e6c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  footer hr {
+    width: 200px;
+    margin: 0 auto 10px auto;
+    border: 0;
+    border-top: 1px solid white;
+  }
+
+  footer strong {
+    color: white;
+  }
+</style>
+    <footer>
+        <hr>
+        <p>&copy; Zo aman-kasina 2025 | <strong>GasyKa Tsara</strong></p>
+        <p>Ny kolontsaina no maha Malagasy. Lovantsika, haren-tsika</p>
+    </footer>
+{% endblock tongony %}
+
+
+

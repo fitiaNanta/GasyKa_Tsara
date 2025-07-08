@@ -1,0 +1,80 @@
+{% extends "fototra.html" %}
+{% block lohateny %}GasyKa Tsara | vohambolana{% endblock lohateny %}
+{% block vatany %}
+<body id="vohambolana">
+    <div class="fototra">       
+        <main class="cards-container">
+            <a href="#">
+                <article class="card highlight" style="background-image: url(https://www.freenews.mg/wp-content/uploads/2021/12/Kabary-malagasy.jpg) ">
+                  <h3>Kabary</h3>
+                  <p>Ny kabary dia lahateny atao amin' ny feo avo ka entina hampitana hafatra ary matetika ravahina amin' ny hainteny sy ohabolana sady atrehin' olona maro. amy nanana ny fomba nitrandrahany ny kabary ny rehetra ka izay no mahatonga ny famaritana somary maro amin' izao fotoana izao ny atao hoe kabary, fa saingy io no fototra ka miainga avy amin' io avokoa ny famaritana rehetra misy ankehitriny.</p>
+                </article>
+            </a>
+            <a href="{% url "ohabolana" %}">
+                <article class="card highlight" style="background-image: url(https://play-lh.googleusercontent.com/q779D9RjtveMG297Ykbxge_Mp3qizudX-ZCwmdNs3ELXBTtMVcQ-A9HeDzw7G7f3EWA) ">
+                  <h3>Ohabolana</h3>
+                  <p>Ny ohabolana dia fehezanteny mirakitra fahendrena fampiasa matetika. Fitambaran'ny teny hoe ohatra sy volana ny teny hoe ohabolana, ka midika fa teny no nahazoana io teny io. Azo ampiasaina amin'ny fiainana andavanandro ny ohabolana, fa tena fanaingoana kabary indrindra koa. Teo amin'ny Ntaolo malagasy dia haoren-tsaina miampita amin'ny alàlan'ny lovantsofina toy ny angano ny ohabolana.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="card highlight" style="background-image: url(https://thumbs.dreamstime.com/b/crayon-lecteur-de-clavette-et-retrait-d-encrier-encastr%C3%A9-22406271.jpg) ">
+                  <h3>Toninkalo</h3>
+                  <p>Ny tononkalo dia karazan-dahabolana na lahatsoratra natao andalana mifanarakaraka (na mifanaingintaingina) misy gadona sy firindrana ary fitsipika mifehy ny fiafaran'ny andalana tsirairay mbamin'ny fomba hahakanto azy sady miompana amin'ny lohahevitra iray no natao koa hiantefa amin'ny saina sy ny fihetseham-po. Ny tononkalo koa matetika dia miresaka fitiavana.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="card highlight" style="background-image: url(https://media.istockphoto.com/id/1409453613/es/vector/libro-de-hechizos-abierto-con-p%C3%A1ginas-antiguas-como-objeto-m%C3%A1gico-y-elemento-de-brujer%C3%ADa.jpg?s=612x612&w=0&k=20&c=FyFVq5SnprY22MdMR-lnc5loLU0w6OQMxaXfwC1Hv5M=) ">
+                  <h3>Rakibolana</h3>
+                  <p>Ny rakibolana dia asa soratra fizaha ahitana vondron-teny ao amin'ny fiteny iray na momba ny sehatr'asa iray izay alahatra amin'ny ankapobeny araka ny abidy sady manome ny famaritana ny teny tsiray ao aminy sy ny fanazavana na ny fifandraisany (teny mitovy hevitra, teny mifanohitra, teny matetika miara-miseho aminy, ny fiforinany). </p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="card highlight" style="background-image: url(https://www.tour-malin-madagascar.com/wp-content/uploads/2015/07/famadihana-madagascar-025.jpg) ">
+                  <h3>Tenim-pahendrena</h3>
+                  <p>Eto no atao ny dinika</p>
+                </article>
+            </a>
+            <a href="#">
+                <article class="card highlight" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40YKQzjsW0txVoGKTpMzSi82cQBAbFxkUuo8ksGCg2NfBecH22kfaL7Wh2NY4QLnj_L8&usqp=CAU) ">
+                  <h3>Ankamantatra</h3>
+                  <p>Ny Ankamantatra dia fanambaràna na fanontaniana misy heviny miafina, sy natao hovahana, homem-baliny. Misy karazany roa ny ankamantatra, dia ny olana ambara amin'ny ankapobeny amin'ny fiteny an'ohatra na fanoharana izay mitaky faharanitan-tsaina sy fieritreretana amim-pitandremana mba hahitana ny vahaolana, ary ny fanontaniana miorina amin' ny kilalaon-teny ahitana teny mitovitovy fanonona na manana heviny maro. </p>
+                </article>
+            </a>
+        </main>
+    </div>
+</body>
+
+
+
+{% endblock vatany %}
+
+{% block tongony %}
+    <style>
+    footer {
+    background-color: #388e6c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+  }
+
+  footer hr {
+    width: 200px;
+    margin: 0 auto 10px auto;
+    border: 0;
+    border-top: 1px solid white;
+  }
+
+  footer strong {
+    color: white;
+  }
+</style>
+    <footer>
+        <hr>
+        <p>&copy; Zo aman-kasina 2025 | <strong>GasyKa Tsara</strong></p>
+        <p>Ny kolontsaina no maha Malagasy. Lovantsika, haren-tsika</p>
+    </footer>
+{% endblock tongony %}
+
+
