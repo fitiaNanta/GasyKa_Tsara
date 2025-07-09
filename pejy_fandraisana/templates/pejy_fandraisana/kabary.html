@@ -1,0 +1,147 @@
+<title>GasyKa Tsara | kabary</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg,rgb(55, 190, 100) 0%,rgb(110, 255, 100) 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      padding: 2rem 1rem 4rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: clamp(2.5rem, 5vw, 4.25rem);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    p.subtitle {
+      font-weight: 400;
+      font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+      margin-bottom: 3rem;
+      opacity: 0.85;
+    }
+
+    /* Buttons container */
+    .btn-container {
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 1.25rem;
+    }
+
+    /* Button styles */
+    .btn {
+      background: transparent;
+      border: 1.5px solid rgba(255 255 255 / 0.65);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.65rem 1.3rem;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+      user-select: none;
+      min-width: 140px;
+      justify-content: center;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: white;
+      stroke-width: 1.8;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      fill: none;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background-color: white;
+      color: #374ABE;
+      border-color: white;
+      box-shadow: 0 6px 12px rgb(255 255 255 / 0.35);
+      outline: none;
+    }
+
+    .btn:focus-visible {
+      outline-offset: 3px;
+      outline: 2.5px solid #fcd535;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .btn {
+        min-width: 120px;
+        font-size: 0.9rem;
+        padding: 0.55rem 1rem;
+      }
+      h1 {
+        font-size: 2.8rem;
+      }
+      p.subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Ny safidy no mameno ny fanahy ho feno <br> Tsindrio ny safidinao </h1>
+  <p class="subtitle">Arahaba sy tongasoa amin’ity pejy manan-danja ity. Ny fahatongavanareo dia fanomezam-boninahitra ny maha-Malagasy antsika.</p>
+
+  <nav class="btn-container" aria-label="Types de site web disponibles">
+    <button id="fanambadihana" class="btn" type="button" aria-label="Boutique en ligne">
+      Fanambadihana
+    </button>
+
+    <button id="fahoriana" class="btn" type="button" aria-label="Portfolio">
+      Fahoriana
+    </button>
+
+    <button id="famadihana" class="btn" type="button" aria-label="Blog">
+      Famadihana
+    </button>
+
+    <button id="lanonana" class="btn" type="button" aria-label="Événement">
+      Lanonana
+    </button>
+
+    <button id="fisaorana" class="btn" type="button" aria-label="Consultant(e)">
+      Fisaorana
+    </button>
+
+    <button id="fahaterahana" class="btn" type="button" aria-label="Restaurant">
+      Fahaterahana
+    </button>
+
+    <button id="fandraisana" class="btn" type="button" aria-label="Autre">
+      Fandraisana
+    </button>
+  </nav>
+
+</body>
+</html>
+
+

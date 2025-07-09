@@ -29,7 +29,7 @@ def parser_proverbes(texte_brut):
     return proverbes
 
 # Enregistrement dans la base de données
-def enregistrer_dans_bdd(proverbes, nom_sokajy="fanambadiana"):
+def enregistrer_dans_bdd(proverbes, nom_sokajy="Ady"):
     sokajy_obj, created = Sokajy.objects.get_or_create(anarana=nom_sokajy)
     count = 0
     for texte, auteur in proverbes:
@@ -45,6 +45,6 @@ def enregistrer_dans_bdd(proverbes, nom_sokajy="fanambadiana"):
 
 # Lancer le script
 if __name__ == "__main__":
-    texte_pdf = extraire_texte_pdf("teny3.pdf")
+    texte_pdf = extraire_texte_pdf("ady.pdf")
     proverbes = parser_proverbes(texte_pdf)
-    enregistrer_dans_bdd(proverbes, nom_sokajy="fanambadiana")
+    enregistrer_dans_bdd(proverbes, nom_sokajy="ady")

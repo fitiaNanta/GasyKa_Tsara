@@ -429,7 +429,6 @@ nav ul li a:hover {
 }
 
 #vohambolana {
-  
   .fototra {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -595,5 +594,43 @@ nav ul li a:hover {
       height: 140px;
       margin: -1.8rem -2rem 1.5rem -2rem;
     }
+  }
+}
+
+#ohabolana {
+  .fototra {
+    font-family: Arial;
+    background: #f0f0f0;
+    padding: 20px;
+  }
+  .fototra h1 {
+    margin: 0 10rem;
+  }
+  .sokajy {
+    margin-bottom: 20px;
+  }
+  .ohabolana {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border-left: 5px solid #008080;
+  }
+  .styled-button {
+    background-color: #0bbc11; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marge */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 20px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+  }
+
+  .styled-button:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
   }
 }

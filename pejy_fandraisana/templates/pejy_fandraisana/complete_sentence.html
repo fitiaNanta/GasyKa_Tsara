@@ -1,0 +1,129 @@
+{% extends "fototra.html" %}
+{% block title %}
+    GasyKa Tsara | haranita-tsaina
+{% endblock title %}
+{% block vatany %}
+<style>
+    body{
+        margin: auto;
+    }
+    h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 16px;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .result {
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  .result h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .result p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  .result strong {
+    color: #007bff;
+  }
+  .loading {
+    display: none;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+  }
+  .loading::after {
+    content: "";
+    animation: dots 1.5s infinite;
+  }
+  @keyframes dots {
+    0% {
+      content: "";
+    }
+    25% {
+      content: ".";
+    }
+    50% {
+      content: "..";
+    }
+    75% {
+      content: "...";
+    }
+    100% {
+      content: "";
+    }
+  }
+}
+</style>
+<body id="feno">
+    <h1>Mameno andian-teny amin'ny teny malagasy</h1>
+    <form method="post" id="sentenceForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Mameno</button>
+    </form>
+    
+    <div class="loading" id="loading">Miandry...</div>
+    
+    {% if valiny %}
+        <div class="result">
+            <h2>Valiny :</h2>
+            <p><strong>Andian-teny tsy feno :</strong> {{ andian_teny_tsy_feno }}</p>
+            <p><strong>Famenoana :</strong>" {{ valiny }} "</p>
+        </div>
+    {% endif %}
+
+    <script>
+        document.getElementById('sentenceForm').addEventListener('submit', function() {
+            // Afficher l'animation de chargement
+            document.getElementById('loading').style.display = 'block';
+        });
+        
+        // Cacher l'animation de chargement une fois la page chargée
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+{% endblock vatany %}
+
+
