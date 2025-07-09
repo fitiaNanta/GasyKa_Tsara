@@ -1,0 +1,97 @@
+{% extends "fototra.html" %}
+{% block vatany %}
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kolontsaina Malagasy</title>
+<style> 
+    body{
+        overflow: hidden;
+    }  
+  a {
+    color: #2a6ebb;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 95%;
+    margin: 15px auto;
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    background-color: #fafafa;
+    overflow: hidden;
+  }
+  .text-with-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .text-with-image p {
+    flex: 1 1 58%;
+    min-width: 280px;
+    font-size: 1.1rem;
+  }
+  .text-with-image img {
+    flex: 0 0 35%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 36px 0 10px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: 8px;
+    font-weight: normal;
+  }
+  .section-subtitle a {
+    margin-left: 8px;
+    font-weight: normal;
+    font-size: 0.85rem;
+  }
+  h3 {
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+  h3 .section-subtitle {
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+</style>
+<body id="kolontsaina">
+  <div class="container">
+    <div class="text-with-image">
+        <h1>{{ article.titre }}</h1>
+      <p>
+        <strong>Ny kolontsaina malagasy</strong> dia <a href="#">kolontsain'</a> ny <a href="#">vahoaka malagasy</a> izay isan-karazany noho ny fisian' ny <a href="#">foko</a> samihafa ao aminy sady ahitana taratra ny andiam-pifindrà-monina nifanesy avy any ivelany nankaty <a href="#">Madagasikara</a>, indrindra ny avy any <a href="#">Azia Atsimo-Atsinanana</a> sy <a href="#">Afrika Atsinanana</a>. Izany kolontsaina izany koa dia ahitana singa avy any <a href="#">Azia Andrefana</a> sy avy any <a href="#">Eorôpa</a>. Anisany mandradfitra ny kolontsaina malagasy ny <a href="#">fiteniny</a> izay miseho amin' ny endrika <a href="#">fitenim-paritra</a> maro, ny <a href="#">finoana sy ny fivavahany</a>, na <a href="#">nentim-paharazana</a> izany na mampidirina teto, ny <a href="#">zavakantony</a>, ary ny fomba amam-panaony.
+      </p>
+    </div>
+    <div class="text-with-image">
+        <h3>
+            
+        </h3>
+      <p>
+
+      </p>
+    </div>
+    </div>
+</body>
+<iframe src="{{ pdf_url }}" width="100%" height="600px" style="border:none;">
+    Ce navigateur ne supporte pas l'affichage PDF.
+</iframe>
+{% endblock vatany %}

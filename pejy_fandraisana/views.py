@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from pejy_fandraisana.forms import SentenceCompletionForm
 from pejy_fandraisana.gemini_api import chat_with_gemini
-from .models import Ohabolana, Sokajy
+from .models import ArticleKolontsaina, Ohabolana, Sokajy
 
 # Create your views here.
 
@@ -46,3 +46,10 @@ def complete_sentence(request):
 
 def pejykabary(request):
     return render(request, 'pejy_fandraisana/kabary.html')
+
+def pejykolontsaina(request):
+    article = ArticleKolontsaina.objects.all()
+    context = {
+        'pdf_url': '/media/pdfs/kolontsaina.pdf'
+    }
+    return render(request, 'pejy_fandraisana/kolontsaina.html', context)
