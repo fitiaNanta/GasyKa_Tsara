@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
-from pejy_fandraisana.views import pejyfandraisana, pejytantara, pejyvohambolana, pejyohabolana,complete_sentence, pejykabary, pejykolontsaina
+from pejy_fandraisana.views import pejyfandraisana, pejytantara, pejyvohambolana, pejyohabolana,complete_sentence, pejykabary, pejykolontsaina, pejysaina
 
 from src import settings
 
@@ -29,7 +29,8 @@ urlpatterns = [
     path('ohabolana', pejyohabolana, name='ohabolana'),
     path('haranitra', complete_sentence, name='haranitra'),
     path('kabary', pejykabary, name='kabary'),
-    path('kolontsaina', pejykolontsaina, name='kolontsaina')
+    path('kolontsaina', pejykolontsaina, name='kolontsaina'),
+    path('saina', pejysaina, name='saina')
 ]
 
 if settings.DEBUG:

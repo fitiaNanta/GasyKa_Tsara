@@ -1,104 +1,109 @@
 {% extends "fototra.html" %}
 {% block title %}
-    GasyKa Tsara | haranita-tsaina
+    GasyKa Tsara | Haranita-tsaina
 {% endblock title %}
 {% block vatany %}
 <style>
-    body{
+    body {
         margin: auto;
+        font-family: Arial, sans-serif;
     }
     h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-  }
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font-size: 16px;
-  }
-  button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  button:hover {
-    background-color: #0056b3;
-  }
-  .result {
-    margin: auto;
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-  }
-  .result h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  .result p {
-    margin: 5px 0;
-    font-size: 16px;
-  }
-  .result strong {
-    color: #007bff;
-  }
-  .loading {
-    display: none;
-    font-size: 18px;
-    color: #333;
-    margin-top: 20px;
-  }
-  .loading::after {
-    content: "";
-    animation: dots 1.5s infinite;
-  }
-  @keyframes dots {
-    0% {
-      content: "";
+        color: #333;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 28px;
     }
-    25% {
-      content: ".";
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
     }
-    50% {
-      content: "..";
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        font-size: 16px;
+        min-height: 100px;
     }
-    75% {
-      content: "...";
+    button {
+        background-color: #28a745;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+        transition: background-color 0.3s;
     }
-    100% {
-      content: "";
+    button:hover {
+        background-color: #218838;
     }
-  }
-}
+    .result {
+        margin: auto;
+        margin-top: 30px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
+    }
+    .result h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .result p {
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .result strong {
+        color: #28a745;
+    }
+    .loading {
+        display: none;
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .loading::after {
+        content: "";
+        animation: dots 1.5s infinite;
+    }
+    @keyframes dots {
+        0% { content: ""; }
+        25% { content: "."; }
+        50% { content: ".."; }
+        75% { content: "..."; }
+        100% { content: ""; }
+    }
+    .instructions {
+        text-align: center;
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
 </style>
-<body id="feno">
-    <h1>Mameno andian-teny amin'ny teny malagasy</h1>
+
+<div id="feno">
+    <h1>Mifampiresaka na Mameno Ohabolana amin'ny Teny Malagasy</h1>
+    <p class="instructions">
+        Soraty eto ny ohabolana tsy feno raha te-hameno azy, na manontania zavatra amin'ny teny malagasy mba hifampiresahana!
+    </p>
     <form method="post" id="sentenceForm">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Mameno</button>
+        <button type="submit">Alefaso</button>
     </form>
     
     <div class="loading" id="loading">Miandry...</div>
@@ -106,24 +111,24 @@
     {% if valiny %}
         <div class="result">
             <h2>Valiny :</h2>
-            <p><strong>Andian-teny tsy feno :</strong> {{ andian_teny_tsy_feno }}</p>
-            <p><strong>Famenoana :</strong>" {{ valiny }} "</p>
+            <p><strong>Fangatahana :</strong> {{ user_input }}</p>
+            <p><strong>Valiny :</strong> {{ valiny }}</p>
         </div>
     {% endif %}
+</div>
 
-    <script>
-        document.getElementById('sentenceForm').addEventListener('submit', function() {
-            // Afficher l'animation de chargement
-            document.getElementById('loading').style.display = 'block';
-        });
-        
-        // Cacher l'animation de chargement une fois la page chargée
-        window.addEventListener('load', function() {
-            document.getElementById('loading').style.display = 'none';
-        });
-    </script>
-</body>
-</html>
+<script>
+    document.getElementById('sentenceForm').addEventListener('submit', function() {
+        // Afficher l'animation de chargement
+        document.getElementById('loading').style.display = 'block';
+        // Désactiver le bouton pour éviter les soumissions multiples
+        document.querySelector('button[type="submit"]').disabled = true;
+    });
+    
+    // Cacher l'animation de chargement une fois la page chargée
+    window.addEventListener('load', function() {
+        document.getElementById('loading').style.display = 'none';
+        document.querySelector('button[type="submit"]').disabled = false;
+    });
+</script>
 {% endblock vatany %}
-
-
